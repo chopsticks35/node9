@@ -1,0 +1,26 @@
+{
+  "name": "node9",
+  "version": "1.0.0",
+  "description": "node web app translator and quiz",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chopsticks35/node9.git"
+  },
+  "author": "ti and ilana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chopsticks35/node9/issues"
+  },
+  "homepage": "https://github.com/chopsticks35/node9#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "google-translate": "^1.0.6",
+    "mongoose": "^4.4.5",
+    "morgan": "^1.7.0"
+  }
+}
