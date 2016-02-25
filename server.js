@@ -1,6 +1,6 @@
 // Requires \\
 //api\\
-var apiKey = 'AIzaSyA09h3FkJ5HAr52MGrdcoKQH5qQzMG4Ixs'
+var apiKey = 'AIzaSyBP6Q4pbQYv2HZwCc1fpIeJtaX6O5BamLQ'
 var googleTranslate = require('google-translate')(apiKey);
 
 var express = require('express');
@@ -20,7 +20,7 @@ app.use(express.static(__dirname + '/public'));
 
 //  Rouste \\
 app.get('/', function(req, res){
-    res.sendFile('views/index.html/', {root : '.public'})
+    res.sendFile('views/index.html', {root : 'public'})
 });
 
 //translate i need to take anon function and make controller server side\\
