@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html ng-app="lingoApp">
-    <head>
-        <meta charset="UTF-8">
+<html>
+<head><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Lingo Translator App</title>
+	<title>Lingo Quiz</title>
 <!--	external stylesheets       -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
 <!--    dev stylesheets     -->
@@ -13,17 +12,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <!--        dev scripts     -->
 	<script src="/public/javascripts/script.js"></script>
-    </head>
-    <body ng-controller="translateController">
-        <h1>LINGO: a translation and quiz app</h1>
-        
-        <div class="row">
-            <form ng-submit="translateWord()">
-                <input ng-model="word.origin" type="text" placeholder="translate from language" >
-                <input ng-model="word.target" type="text" placeholder="translate from lang" >
-                <input ng-model="word.text" type="text" placeholder="enter word to translate" >
-                <input type="submit">
-            </form>
-        </div>
-    </body>
+</head>
+<body>
+<!-- need to make schemas and classes for quizzes, quiz questions etc-->
+</body>
 </html>

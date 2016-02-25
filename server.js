@@ -1,5 +1,8 @@
 // Requires \\
-var googleTranslate = require('google-translate')('AIzaSyA09h3FkJ5HAr52MGrdcoKQH5qQzMG4Ixs'); 
+//api\\
+var apiKey = 'AIzaSyA09h3FkJ5HAr52MGrdcoKQH5qQzMG4Ixs'
+var googleTranslate = require('google-translate')(apiKey);
+
 var express = require('express');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
@@ -20,6 +23,18 @@ app.get('/', function(req, res){
     res.sendFile('views/index.html/', {root : '.public'})
 });
 
+//translate i need to take anon function and make controller server side\\
+app.post('/api/translate', function(req, res) { 
+	googleTranslate.translate(req.body.text, req.body.target, function (err, translation) {
+		if (err) {
+			console.log(err)
+			res.send('Failure...')
+		}
+		else {
+			console.log('Success!')
+			res.send(translation.translatedText)}
+	})
+})
 
 
 // Creating Server and Listening for Connections \\
