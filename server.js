@@ -1,22 +1,21 @@
-var googleTranslate = require('google-translate')(AIzaSyA09h3FkJ5HAr52MGrdcoKQH5qQzMG4Ixs); 
+// Requires \\
+var googleTranslate = require('google-translate')('AIzaSyA09h3FkJ5HAr52MGrdcoKQH5qQzMG4Ixs'); 
 var express = require('express');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
-var mongoose= require('mongoose');
-
-// construct App object \\
+var mongoose = require('mongoose')
+// Create Express App Object \\
 var app = express();
 
-// connect mongoose \\
-mongoose.connect('mongod://localhost/lingo');
+mongoose.connect('mongodb://localhost/lingo');
 
-// app config\\
+// App Config \\
 app.use(logger('dev'));
-app.use(bodyParser.json);
-app.use()bodyPArser.urlencoded({extended:true});
-app.use(express.static(_dirname + '/public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(__dirname + '/public'));
 
-//Rouste \\
+//  Rouste \\
 app.get('/', function(req, res){
     res.sendFile('views/index.html/', {root : '.public'})
 });

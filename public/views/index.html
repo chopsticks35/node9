@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="lingoApp">
     <head>
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,13 +14,16 @@
 <!--        dev scripts     -->
 	<script src="/public/javascripts/script.js"></script>
     </head>
-    <body>
-        <h1>LINGO:  a translator app</h1>
+    <body ng-controller="lingoController">
+        <h1>LINGO: a translation and quiz app</h1>
         
-        <form>
-            <input >
-        
-        </form>
-    
+        <div class="row">
+            <form ng-submit="translateWord()">
+                <input ng-model="word.origin" type="text" placeholder="translate from language" >
+                <input ng-model="word.text" type="text" placeholder="enter word to translate" >
+                <input ng-model="word.translation" type="text" placeholder="translate from lang" >
+                <input type="submit">
+            </form>
+        </div>
     </body>
 </html>
